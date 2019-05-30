@@ -1,0 +1,10 @@
+Promise
+setTimeout
+nextTick
+
+Have same reference with original buffer. (Even thought it return a part of current buffer, the whole buffer still in memory)
+Copy buffer (Stream)
+
+You can assign new object to module.exports
+but not with exports
+Only module.exports has return
