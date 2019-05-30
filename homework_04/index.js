@@ -11,10 +11,14 @@ subject.subscribe(v => {
         return;
     }
     fork('readfile.js')
-        .on('message', data => {
-            console.log(data);
-            res.write(data);
-            res.end();
+        .on('message', msg => {
+            if (msg.type === 'data') {
+                console.log(msg.data);
+                res.write(Buffer.from(msg.data));
+            }
+            else {
+                res.end();
+            }
         })
         .send(qs.filename);
 })

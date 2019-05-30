@@ -5,9 +5,15 @@ process.on('message', filename => {
         process.send('File not found!');
     }
     else {
-        const data = fs.readFileSync(filename).toString();
-        console.log(data);
-        process.send(data);
+        fs.createReadStream(filename, { highWaterMark: 10 })
+            .on('data', chunk => {
+                console.log(chunk.toString());
+                process.send({ type: 'data', data: chunk });
+            })
+            .on('end', () => {
+                process.send({ type: 'end' });
+                process.exit(1);
+            });
     }
-    process.exit(1);
+
 })
