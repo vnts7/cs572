@@ -1,0 +1,25 @@
+//Invalid json
+POST http://localhost:3000/grades HTTP/1.1
+content-type: application/json
+
+{
+    "id":999,
+    "name": "Invalid json",
+    "course": "CS472",
+    "grade": ,
+}
+###
+POST http://localhost:3000/grades HTTP/1.1
+content-type: application/json
+
+{
+    "id":999,
+    "name": "Handsome Mohamed",
+    "course": "CS472",
+    "grade": 101
+}
+
+###
+GET http://localhost:3000/grades HTTP/1.1
+###
+DELETE http://localhost:3000/grades/999 HTTP/1.1
