@@ -1,0 +1,25 @@
+
+POST http://localhost:3000/lectures HTTP/1.1
+content-type: application/json
+
+{
+    "course": "CS473",
+    "lecture": "CS473 Some lecture"
+}
+
+###
+PUT http://localhost:3000/lectures HTTP/1.1
+content-type: application/json
+
+{
+    "_id": "5cf57863b7919b2a0c875fd7",
+    "course": "CS473_Updated",
+    "lecture": "CS473 Some lecture"
+}
+
+###
+GET http://localhost:3000/lectures HTTP/1.1
+###
+GET http://localhost:3000/lectures/search/cs47 HTTP/1.1
+###
+DELETE http://localhost:3000/lectures/5cf57815b7919b2a0c875fd6 HTTP/1.1
