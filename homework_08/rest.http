@@ -1,0 +1,58 @@
+
+POST http://localhost:3000/places HTTP/1.1
+content-type: application/json
+
+{
+    "name": "BP",
+    "category": "Gas station",
+    "location":[-91.9662066,41.0202875]
+}
+###
+POST http://localhost:3000/places HTTP/1.1
+content-type: application/json
+
+{
+    "name": "Logli's Store",
+    "category": "Convenience store",
+    "location":[-91.9662066,41.0202875]
+}
+###
+POST http://localhost:3000/places HTTP/1.1
+content-type: application/json
+
+{
+    "name": "Noodle House",
+    "category": "restaurant",
+    "location":[-91.9647031,41.0082211]
+}
+###
+POST http://localhost:3000/places HTTP/1.1
+content-type: application/json
+
+{
+    "name": "Imperial Buffet",
+    "category": "restaurant",
+    "location":[-91.9665713,41.0079014]
+}
+###
+POST http://localhost:3000/places HTTP/1.1
+content-type: application/json
+
+{
+    "name": "La Hacienda",
+    "category": "restaurant",
+    "location":[-91.9914317,41.0079721]
+}
+###
+POST http://localhost:3000/places HTTP/1.1
+content-type: application/json
+
+{
+    "name": "Pizza Hut",
+    "category": "restaurant",
+    "location":[-91.9914317,41.0079721]
+}
+###
+GET http://localhost:3000/places HTTP/1.1
+###
+GET http://localhost:3000/places/search?cat=restaurant&lat=41.017654&long=-91.9665342 HTTP/1.1
