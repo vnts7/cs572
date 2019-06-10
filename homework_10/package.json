@@ -1,0 +1,21 @@
+{
+  "name": "homework_10",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tsc && webpack ./dist/app.js -o ./dist/bundle.js --devtool source-map",
+    "dev": "npm run build && http-server"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "http-server": "^0.11.1",
+    "webpack": "^4.33.0"
+  },
+  "devDependencies": {
+    "webpack-cli": "^3.3.3"
+  }
+}
