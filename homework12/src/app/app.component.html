@@ -1,0 +1,5 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<span>Value of counter 1 is: {{ComponentCounterValue}}</span>
+<app-counter [counterValue]="ComponentCounterValue" (counterChange)="counterChange($event)"></app-counter>
+<span>Value of counter 2 is: {{Component2CounterValue}}</span>
+<app-counter [counterValue]="Component2CounterValue" (counterChange)="counterChange2($event)"></app-counter>
