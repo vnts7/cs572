@@ -1,0 +1,6 @@
+<h2>User list</h2>
+<ul>
+  <li *ngFor="let u of data$ | async">
+    <a [routerLink]="['detail',u.login.uuid]">{{u.name.first}} {{u.name.last}}</a>
+  </li>
+</ul>
